@@ -1,0 +1,50 @@
+.user-banner {
+  background-color: red;
+  border-bottom: 1px solid #333;
+  height: 300px;
+  position: fixed;
+  width: 100%;
+  z-index: 0;
+}
+
+.user-wrap {
+  position: relative;
+  padding-top: 220px;
+  // background-color: #fff;
+  z-index: 1;
+}
+
+.user-body {
+  background-color: #fff;
+  z-index: 1;
+  margin-top: -78px;
+  padding-top: 100px;
+}
+
+.user-detail {
+  text-align: center;
+
+  h2 {
+    font-size: 1.5em;
+    font-weight: 700;
+  }
+
+  .job-title {
+    margin-left: 20px;
+    border-left: 1px solid #333;
+    padding-left: 20px;
+    font-weight: 500;
+  }
+}
+
+.user-icon {
+  border-radius: 100px;
+  border: 4px solid #777;
+  display: block;
+  background-color: none;
+  margin: 0 auto;
+  z-index: 1;
+  height: 150px;
+  width: 150px;
+
+}

@@ -9735,3 +9735,56 @@ th.hide-for-touch {
     display: table-cell !important;
   }
 }
+/* line 1, ../scss/_overwrite.scss */
+.user-banner {
+  background-color: red;
+  border-bottom: 1px solid #333;
+  height: 300px;
+  position: fixed;
+  width: 100%;
+  z-index: 0;
+}
+
+/* line 10, ../scss/_overwrite.scss */
+.user-wrap {
+  position: relative;
+  padding-top: 220px;
+  z-index: 1;
+}
+
+/* line 17, ../scss/_overwrite.scss */
+.user-body {
+  background-color: #fff;
+  z-index: 1;
+  margin-top: -78px;
+  padding-top: 100px;
+}
+
+/* line 24, ../scss/_overwrite.scss */
+.user-detail {
+  text-align: center;
+}
+/* line 27, ../scss/_overwrite.scss */
+.user-detail h2 {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+/* line 32, ../scss/_overwrite.scss */
+.user-detail .job-title {
+  margin-left: 20px;
+  border-left: 1px solid #333;
+  padding-left: 20px;
+  font-weight: 500;
+}
+
+/* line 40, ../scss/_overwrite.scss */
+.user-icon {
+  border-radius: 100px;
+  border: 4px solid #777;
+  display: block;
+  background-color: none;
+  margin: 0 auto;
+  z-index: 1;
+  height: 150px;
+  width: 150px;
+}
