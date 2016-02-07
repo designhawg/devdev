@@ -9746,7 +9746,7 @@ th.hide-for-touch {
 }
 
 /* line 10, ../scss/_overwrite.scss */
-.user-banner {
+.user-banner, .game-banner {
   background-color: #333;
   border-bottom: 1px solid #333;
   background-image: url("http://cindymakesgames.com/wp-content/uploads/2014/05/WeAreChicagoScreenshotPark1.png");
@@ -9757,18 +9757,43 @@ th.hide-for-touch {
 }
 
 /* line 20, ../scss/_overwrite.scss */
+.game-top {
+  margin-top: 10px;
+}
+
+/* line 24, ../scss/_overwrite.scss */
+.eighty-width {
+  width: 80%;
+  margin-top: -100px;
+  margin-bottom: 30px;
+}
+
+/* line 30, ../scss/_overwrite.scss */
+.game-banner {
+  background-image: url("http://www.wearechicagogame.com/press/we_are_chicago/images/WeAreChicagoFriendsPortrait.png");
+  height: 500px;
+}
+
+/* line 35, ../scss/_overwrite.scss */
 .user-wrap {
   position: relative;
   padding-top: 220px;
   z-index: 1;
 }
 
-/* line 26, ../scss/_overwrite.scss */
+/* line 41, ../scss/_overwrite.scss */
+.game-wrap {
+  position: relative;
+  padding-top: 500px;
+  z-index: 1;
+}
+
+/* line 47, ../scss/_overwrite.scss */
 article.user {
   padding-bottom: 80px;
 }
 
-/* line 30, ../scss/_overwrite.scss */
+/* line 51, ../scss/_overwrite.scss */
 .user-body {
   background-color: #fff;
   z-index: 1;
@@ -9776,14 +9801,21 @@ article.user {
   padding: 100px 0;
 }
 
-/* line 37, ../scss/_overwrite.scss */
+/* line 58, ../scss/_overwrite.scss */
+.game-body {
+  background-color: #fff;
+  z-index: 1;
+  padding: 30px 0 100px 0;
+}
+
+/* line 64, ../scss/_overwrite.scss */
 ul.team {
   list-style-type: none;
   margin-left: 0;
   width: 100%;
   margin-bottom: 40px;
 }
-/* line 43, ../scss/_overwrite.scss */
+/* line 70, ../scss/_overwrite.scss */
 ul.team li {
   float: left;
   height: 70px;
@@ -9792,15 +9824,22 @@ ul.team li {
   background-color: green;
   display: block;
   margin-right: 15px;
+  margin-bottom: 15px;
 }
 
-/* line 54, ../scss/_overwrite.scss */
+/* line 82, ../scss/_overwrite.scss */
 .noclaim {
   background-image: url("../images/spaceman.png");
   background-size: cover;
 }
 
-/* line 59, ../scss/_overwrite.scss */
+/* line 87, ../scss/_overwrite.scss */
+.claim1 {
+  background-image: url("https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/04c/1fe/2326ed0.jpg");
+  background-size: cover;
+}
+
+/* line 92, ../scss/_overwrite.scss */
 .topper {
   background-color: rgba(0, 0, 0, 0.8);
   height: 50px;
@@ -9808,41 +9847,41 @@ ul.team li {
   position: fixed;
   z-index: 10;
 }
-/* line 66, ../scss/_overwrite.scss */
+/* line 99, ../scss/_overwrite.scss */
 .topper h1, .topper h2, .topper h3, .topper h4, .topper p, .topper li, .topper a {
   color: #dadada;
 }
-/* line 70, ../scss/_overwrite.scss */
+/* line 103, ../scss/_overwrite.scss */
 .topper ul {
   list-style-type: none;
 }
-/* line 74, ../scss/_overwrite.scss */
+/* line 107, ../scss/_overwrite.scss */
 .topper li a {
   padding: 12px 20px;
   overflow: hidden;
   display: block;
 }
-/* line 80, ../scss/_overwrite.scss */
+/* line 113, ../scss/_overwrite.scss */
 .topper li a:hover {
   background-color: #333333;
 }
 
-/* line 85, ../scss/_overwrite.scss */
+/* line 118, ../scss/_overwrite.scss */
 .user-role {
   font-weight: 700;
 }
 
-/* line 89, ../scss/_overwrite.scss */
+/* line 122, ../scss/_overwrite.scss */
 .user-detail {
   text-align: center;
   margin-bottom: 40px;
 }
-/* line 93, ../scss/_overwrite.scss */
+/* line 126, ../scss/_overwrite.scss */
 .user-detail h2 {
   font-size: 1.5em;
   font-weight: 700;
 }
-/* line 98, ../scss/_overwrite.scss */
+/* line 131, ../scss/_overwrite.scss */
 .user-detail .job-title {
   margin-left: 12px;
   border-left: 1px solid #333;
@@ -9850,14 +9889,14 @@ ul.team li {
   font-weight: 500;
 }
 
-/* line 106, ../scss/_overwrite.scss */
+/* line 139, ../scss/_overwrite.scss */
 .user-subjects {
   padding-bottom: 10px;
   margin-bottom: 20px;
   border-bottom: 10px solid #dadada;
 }
 
-/* line 112, ../scss/_overwrite.scss */
+/* line 145, ../scss/_overwrite.scss */
 .user-icon {
   border-radius: 100px;
   border: 4px solid #777;
@@ -9869,23 +9908,23 @@ ul.team li {
   width: 150px;
 }
 
-/* line 124, ../scss/_overwrite.scss */
+/* line 157, ../scss/_overwrite.scss */
 .game-title {
   font-weight: 700;
 }
 
-/* line 128, ../scss/_overwrite.scss */
+/* line 161, ../scss/_overwrite.scss */
 .game-site {
   margin-top: -10px;
   font-size: .9em;
 }
 
-/* line 133, ../scss/_overwrite.scss */
+/* line 166, ../scss/_overwrite.scss */
 .game-platforms, .game-platforms ul {
   list-style-type: none;
   margin-left: 0;
 }
-/* line 137, ../scss/_overwrite.scss */
+/* line 170, ../scss/_overwrite.scss */
 .game-platforms .grouping, .game-platforms ul .grouping {
   font-weight: 700;
   text-transform: uppercase;
@@ -9893,7 +9932,6 @@ ul.team li {
 }
 
 /* line 1, ../scss/_home.scss */
-<<<<<<< HEAD
 #logo {
   margin-top: 20px;
 }
@@ -9906,14 +9944,4 @@ div.bazinga {
 /* line 9, ../scss/_home.scss */
 div.form {
   margin-top: 20px;
-=======
-body {
-  background-image: url("images/tempbackground.jpg");
-}
-
-/* line 5, ../scss/_home.scss */
-div.logo {
-  margin-top: 20px;
-  z-index: 9999;
->>>>>>> origin/master
 }

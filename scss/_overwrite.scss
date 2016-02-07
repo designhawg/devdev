@@ -7,7 +7,7 @@
   width: 200px;
 }
 
-.user-banner {
+.user-banner, .game-banner {
   background-color: #333;
   border-bottom: 1px solid #333;
   background-image: url('http://cindymakesgames.com/wp-content/uploads/2014/05/WeAreChicagoScreenshotPark1.png');
@@ -17,9 +17,30 @@
   z-index: 0;
 }
 
+.game-top {
+  margin-top: 10px;
+}
+
+.eighty-width {
+  width: 80%;
+  margin-top: -100px;
+  margin-bottom: 30px;
+}
+
+.game-banner {
+  background-image: url('http://www.wearechicagogame.com/press/we_are_chicago/images/WeAreChicagoFriendsPortrait.png');
+  height: 500px; ;
+}
+
 .user-wrap {
   position: relative;
   padding-top: 220px;
+  z-index: 1;
+}
+
+.game-wrap {
+  position: relative;
+  padding-top: 500px;
   z-index: 1;
 }
 
@@ -32,6 +53,12 @@ article.user {
   z-index: 1;
   margin-top: -78px;
   padding: 100px 0;
+}
+
+.game-body {
+  background-color: #fff;
+  z-index: 1;
+  padding: 30px 0 100px 0;
 }
 
 ul.team {
@@ -48,11 +75,17 @@ ul.team {
     background-color: green;
     display: block;
     margin-right: 15px;
+    margin-bottom: 15px;
   }
 }
 
 .noclaim {
   background-image: url('../images/spaceman.png');
+  background-size: cover;
+}
+
+.claim1 {
+  background-image: url('https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/04c/1fe/2326ed0.jpg');
   background-size: cover;
 }
 
