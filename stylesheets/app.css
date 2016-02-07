@@ -9736,6 +9736,16 @@ th.hide-for-touch {
   }
 }
 /* line 1, ../scss/_overwrite.scss */
+.logotop {
+  background-image: url("../images/logonobackground_white.png");
+  background-size: cover;
+  float: left;
+  height: 30px;
+  margin: 10px 0 0 20px;
+  width: 200px;
+}
+
+/* line 10, ../scss/_overwrite.scss */
 .user-banner {
   background-color: #333;
   border-bottom: 1px solid #333;
@@ -9746,14 +9756,14 @@ th.hide-for-touch {
   z-index: 0;
 }
 
-/* line 11, ../scss/_overwrite.scss */
+/* line 20, ../scss/_overwrite.scss */
 .user-wrap {
   position: relative;
   padding-top: 220px;
   z-index: 1;
 }
 
-/* line 17, ../scss/_overwrite.scss */
+/* line 26, ../scss/_overwrite.scss */
 .user-body {
   background-color: #fff;
   z-index: 1;
@@ -9761,7 +9771,7 @@ th.hide-for-touch {
   padding: 100px 0;
 }
 
-/* line 24, ../scss/_overwrite.scss */
+/* line 33, ../scss/_overwrite.scss */
 .topper {
   background-color: rgba(0, 0, 0, 0.8);
   height: 50px;
@@ -9769,41 +9779,41 @@ th.hide-for-touch {
   position: fixed;
   z-index: 10;
 }
-/* line 31, ../scss/_overwrite.scss */
+/* line 40, ../scss/_overwrite.scss */
 .topper h1, .topper h2, .topper h3, .topper h4, .topper p, .topper li, .topper a {
   color: #dadada;
 }
-/* line 35, ../scss/_overwrite.scss */
+/* line 44, ../scss/_overwrite.scss */
 .topper ul {
   list-style-type: none;
 }
-/* line 39, ../scss/_overwrite.scss */
+/* line 48, ../scss/_overwrite.scss */
 .topper li a {
   padding: 12px 20px;
   overflow: hidden;
   display: block;
 }
-/* line 45, ../scss/_overwrite.scss */
+/* line 54, ../scss/_overwrite.scss */
 .topper li a:hover {
   background-color: #333333;
 }
 
-/* line 50, ../scss/_overwrite.scss */
+/* line 59, ../scss/_overwrite.scss */
 .user-role {
   font-weight: 700;
 }
 
-/* line 54, ../scss/_overwrite.scss */
+/* line 63, ../scss/_overwrite.scss */
 .user-detail {
   text-align: center;
   margin-bottom: 40px;
 }
-/* line 58, ../scss/_overwrite.scss */
+/* line 67, ../scss/_overwrite.scss */
 .user-detail h2 {
   font-size: 1.5em;
   font-weight: 700;
 }
-/* line 63, ../scss/_overwrite.scss */
+/* line 72, ../scss/_overwrite.scss */
 .user-detail .job-title {
   margin-left: 12px;
   border-left: 1px solid #333;
@@ -9811,14 +9821,14 @@ th.hide-for-touch {
   font-weight: 500;
 }
 
-/* line 71, ../scss/_overwrite.scss */
+/* line 80, ../scss/_overwrite.scss */
 .user-subjects {
   padding-bottom: 10px;
   margin-bottom: 20px;
   border-bottom: 10px solid #dadada;
 }
 
-/* line 77, ../scss/_overwrite.scss */
+/* line 86, ../scss/_overwrite.scss */
 .user-icon {
   border-radius: 100px;
   border: 4px solid #777;
@@ -9830,23 +9840,23 @@ th.hide-for-touch {
   width: 150px;
 }
 
-/* line 89, ../scss/_overwrite.scss */
+/* line 98, ../scss/_overwrite.scss */
 .game-title {
   font-weight: 700;
 }
 
-/* line 93, ../scss/_overwrite.scss */
+/* line 102, ../scss/_overwrite.scss */
 .game-site {
   margin-top: -10px;
   font-size: .9em;
 }
 
-/* line 98, ../scss/_overwrite.scss */
+/* line 107, ../scss/_overwrite.scss */
 .game-platforms, .game-platforms ul {
   list-style-type: none;
   margin-left: 0;
 }
-/* line 102, ../scss/_overwrite.scss */
+/* line 111, ../scss/_overwrite.scss */
 .game-platforms .grouping, .game-platforms ul .grouping {
   font-weight: 700;
   text-transform: uppercase;
@@ -9854,6 +9864,7 @@ th.hide-for-touch {
 }
 
 /* line 1, ../scss/_home.scss */
+<<<<<<< HEAD
 #logo {
   margin-top: 20px;
 }
@@ -9866,4 +9877,14 @@ div.bazinga {
 /* line 9, ../scss/_home.scss */
 div.form {
   margin-top: 20px;
+=======
+body {
+  background-image: url("images/tempbackground.jpg");
+}
+
+/* line 5, ../scss/_home.scss */
+div.logo {
+  margin-top: 20px;
+  z-index: 9999;
+>>>>>>> origin/master
 }
