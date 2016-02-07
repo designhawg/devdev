@@ -9852,3 +9852,18 @@ th.hide-for-touch {
   text-transform: uppercase;
   font-size: .7em;
 }
+
+/* line 1, ../scss/_home.scss */
+#logo {
+  margin-top: 20px;
+}
+
+/* line 5, ../scss/_home.scss */
+div.bazinga {
+  margin-right: 20px;
+}
+
+/* line 9, ../scss/_home.scss */
+div.form {
+  margin-top: 20px;
+}
