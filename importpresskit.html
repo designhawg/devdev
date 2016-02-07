@@ -1,0 +1,157 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation</title>
+    <link rel="stylesheet" href="stylesheets/app.css" />
+    <script src="bower_components/modernizr/modernizr.js"></script>
+  </head>
+  <body>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/foundation/js/foundation.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/jquery.xdomainajax.js"></script>
+
+    <div class="row">
+      <h3>New Presskit registration:</h3>
+    </div>
+    <form id="addpresskitform">
+      <div class="row">
+        <div class="large-12 columns">
+          <label>Presskit URL</label>
+          <input type="text" id="presskitURL" placeholder="http://www.vlambeer.com/press/sheet.php?p=Nuclear_Throne" value="http://www.vlambeer.com/press/sheet.php?p=Nuclear_Throne" />
+        </div>
+      </div>
+      <div class="row">
+        <a href="#" onclick="$(this).closest('form').submit(); return false;" class="small button">Add</a><br/>
+      </div>
+    </form>
+    <div class="row">
+      <div class="panel" id="presskitDebug">
+      </div>
+    </div>
+
+    <script language="JavaScript">
+
+    function processPresskitXML(XMLSource)
+    {
+      var debugLog = $("#presskitDebug").html();
+      var xml = $.parseXML(XMLSource.responseText);
+      var gameNode = $(xml).find("game");
+
+      if($(xml).find("founding-date").length === 0 || $(xml).find("based-in").length === 0)
+      {
+        debugLog += "Found game XML!<br/>";
+
+        var gameTitle = $(xml).find("title").text();
+
+        debugLog += "Game Title: " + gameTitle + "<br/>";
+
+//        debugLog += "Release Date: " + $(gameNode).find("release-date").text() + "<br/>";
+
+        debugLog += "<form id=\"creditsForm\">Contributors on " + gameTitle + ":<br/>";
+
+        var credits = $(gameNode).find("credits");
+
+        $(credits).find("credit").each(function ()
+        {
+          var person = $(this).find("person").text();
+          var role = $(this).find("role").text();
+//          debugLog += "<div class=\"row\"><div class=\"small-3 columns\"><input type=\"text\" placeholder=\"" + person + "\" value=\"" + person + "\" /></div><div class=\"small-1 columns inline\" style=\"text-align: center\"> is a </div><div class=\"small-3 columns\"><input type=\"text\" placeholder=\"" + role + "\" value=\"" + role + "\" /></div><div class=\"small-5 columns inline\"> on " + gameTitle + "</div></div><br/>";
+          debugLog += "<div class=\"row\"><div class=\"small-3 columns\"><input type=\"text\" placeholder=\"" + person + "\" value=\"" + person + "\" /></div><div class=\"small-1 columns\" style=\"text-align: center;display: block;margin-top: 7px;\"> is a </div><div class=\"small-3 columns\"><input type=\"text\" placeholder=\"" + role + "\" value=\"" + role + "\" /></div><div class=\"small-1 columns\" style=\"display: block;margin-top: 7px;\"> Email: </div><div class=\"small-4 columns\"><input type=\"text\" placeholder=\"your@email.com\" /></div></div><br/>";
+        });
+
+        debugLog += "<div class=\"row\"><div class=\"small-12 columns\"><a href=\"#\" onclick=\"$(this).closest('form').submit(); return false;\" class=\"small button\">Submit team</a><br/></div></div>"
+
+        debugLog += "</form>";
+      }
+      else
+      {
+        debugLog += "This doesn't look like a presskit() XML file!<br/>Are you maybe using the company presskit and not the game specific one?<br/>";
+      }
+
+      $("#presskitDebug").html(debugLog);
+    }
+
+    function processCompanyXML(CompanyXMLSource)
+    {
+      var debugLog = $("#presskitDebug").html();
+      var xml = $.parseXML(CompanyXMLSource.responseText);
+      var contact = $(xml).find("press-contact");
+
+      if($(contact).length != 0)
+      {
+        debugLog += "Sent email to " + contact.text() + " to verify team ownership.  Please enter the verification code we just sent to you!<br/><div class=\"row\"><div class=\"small-12 columns\"><label>Verification code</label><input type=\"text\" /></div></div><div class=\"row\"><div class=\"small-12 columns\"><a href=\"#\" onclick=\"requestGameXML(); return false;\" class=\"small button\">Verify team ownership</a><br/></div></div>"
+      }
+      else
+      {
+        debugLog += "Couldn't parse company XML!  Make sure your presskit address is correct.<br/>";
+      }
+
+      $("#presskitDebug").html(debugLog);
+    }
+
+    function requestGameXML()
+    {
+      var debugLog = $("#presskitDebug").html();
+      var presskitURL = $("#presskitURL").val().replace("sheet.php?p=", "");
+      presskitURL += "/data.xml";
+
+      debugLog+="Parsing game XML from " + presskitURL + "<br/>";
+
+      $("#presskitDebug").html(debugLog);
+
+      $.ajax({
+        type: 'GET',
+        dataType: "xml",
+        url: presskitURL,
+
+        success: function(XMLArray) {
+          processPresskitXML(XMLArray);
+        },
+
+        error: function() {
+          var debugLog = $("#presskitDebug").html();
+
+          debugLog += "Couldn't retrieve XML file from address.<br/>";
+
+          $("#presskitDebug").html(debugLog);
+        }
+      });
+    }
+
+    function parsePresskitXML(presskitPageURL)
+    {
+      var companyPresskitURL = presskitPageURL.substring(0, presskitPageURL.indexOf("sheet.php?p=")) + "data.xml";
+      var debugLog="Parsing company XML from " + companyPresskitURL + "<br/>";
+
+      $("#presskitDebug").html(debugLog);
+
+      $.ajax({
+        type: 'GET',
+        dataType: "xml",
+        url: companyPresskitURL,
+
+        success: function(CompanyXMLArray) {
+          processCompanyXML(CompanyXMLArray);
+        },
+
+        error: function() {
+          var debugLog = $("#presskitDebug").html();
+
+          debugLog += "Couldn't retrieve XML file from address.<br/>";
+
+          $("#presskitDebug").html(debugLog);
+        }
+      });
+    }
+
+    $("#addpresskitform").submit(function (event) {
+      parsePresskitXML($("#presskitURL").val());
+      event.preventDefault();
+    })
+    </script>
+
+  </body>
+</html>
