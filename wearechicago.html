@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Foundation</title>
-    <link rel="stylesheet" href="../stylesheets/app.css" />
+    <link rel="stylesheet" href="stylesheets/app.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
     <script src="bower_components/modernizr/modernizr.js"></script>
@@ -89,22 +89,51 @@
 
             <h5 class="user-subjects">Team</h5>
             <ul class="team">
-              <a href="/wearechicago/michaelblock.html"><li class="noclaim" title="Michael Block"></li></a>
-              <a href="#1"><li class="noclaim" title="Yuri Alexander"></li></a>
-              <a href="/wearechicago/cynthiamiller.html"><li class="claim1" title="Cynthia Miller"></li></a>
-              <a href="#1"><li class="noclaim" title="Luke Baker"></li></a>
-              <a href="#1"><li class="noclaim" title="Ian Beckman"></li></a>
-              <a href="#1"><li class="noclaim" title="nick Bouldin"></li></a>
-              <a href="#1"><li class="noclaim" title="Yuri Alexander"></li></a>
-              <a href="#1"><li class="noclaim" title="Jon Andersen"></li></a>
-              <a href="#1"><li class="noclaim" title="Luke Baker"></li></a>
-              <a href="#1"><li class="noclaim" title="Ian Beckman"></li></a>
-              <a href="#1"><li class="noclaim" title="nick Bouldin"></li></a>
-              <a href="#1"><li class="noclaim" title="Yuri Alexander"></li></a>
-              <a href="#1"><li class="noclaim" title="Jon Andersen"></li></a>
-              <a href="#1"><li class="noclaim" title="Luke Baker"></li></a>
-              <a href="#1"><li class="noclaim" title="Ian Beckman"></li></a>
-              <a href="#1"><li class="noclaim" title="nick Bouldin"></li></a>
+              <style type="text/css">
+                a.hovertext {
+                  position: relative;
+                  width: 70px;
+                  text-decoration: none !important;
+                  text-align: center;
+                }
+                a.hovertext:after {
+                  content: attr(title);
+                  position: absolute;
+                  left: -85px;
+                  bottom: -65px;
+                  padding: 0px 0px;
+                  width: 70px;
+                  background: rgba(0,0,0,0.8);
+                  text-decoration: none !important;
+                  color: #fff;
+                  opacity: 0;
+                  -webkit-transition: 0.5s;
+                  -moz-transition: 0.5s;
+                  -o-transition: 0.5s;
+                  -ms-transition: 0.5s;
+                }
+                a.hovertext:hover:after, a.hovertext:focus:after {
+                  opacity: 1.0;
+                }
+              </style>
+              <a href="/wearechicago/michaelblock.html" title="Michael Block" class="hovertext"><li class="noclaim" title="Michael Block"></li></a>
+              <a href="#1" title="Yuri Alexander" class="hovertext"><li class="noclaim" title="Yuri Alexander"></li></a>
+              <a href="/wearechicago/cynthiamiller.html" title="Cynthia Miller" class="hovertext"><li class="claim1" title="Cynthia Miller"></li></a>
+              <a href="#1" title="Luke Baker" class="hovertext"><li class="noclaim" title="Luke Baker"></li></a>
+              <a href="#1" title="Ian Beckman" class="hovertext"><li class="noclaim" title="Ian Beckman"></li></a>
+              <a href="#1" title="Nick Bouldin" class="hovertext"><li class="noclaim" title="Nick Bouldin"></li></a>
+              <a href="#1" title="Yuri Alexander" class="hovertext"><li class="noclaim" title="Yuri Alexander"></li></a>
+              <a href="#1" title="Jon Anderson" class="hovertext"><li class="noclaim" title="Jon Andersen"></li></a>
+              <a href="#1" title="Luke Baker" class="hovertext"><li class="noclaim" title="Luke Baker"></li></a>
+              <a href="#1" title="Ian Beckman" class="hovertext"><li class="noclaim" title="Ian Beckman"></li></a>
+              <a href="#1" title="Nick Bouldin" class="hovertext"><li class="noclaim" title="Nick Bouldin"></li></a>
+              <a href="#1" title="Yuri Alexander" class="hovertext"><li class="noclaim" title="Yuri Alexander"></li></a>
+              <a href="#1" title="Jon Anderson" class="hovertext"><li class="noclaim" title="Jon Andersen"></li></a>
+              <a href="#1" title="Luke Baker" class="hovertext"><li class="noclaim" title="Luke Baker"></li></a>
+              <a href="#1" title="Ian Beckman" class="hovertext"><li class="noclaim" title="Ian Beckman"></li></a>
+              <a href="#1" title="Nick Bouldin" class="hovertext"><li class="noclaim" title="Nick Bouldin"></li></a>
+              <a href="#1" title="Yuri Alexander" class="hovertext"><li class="noclaim" title="Yuri Alexander"></li></a>
+              <a href="#1" title="Jon Anderson" class="hovertext"><li class="noclaim" title="Jon Andersen"></li></a>
             </ul>
           </section>
         </div>
