@@ -9852,3 +9852,14 @@ th.hide-for-touch {
   text-transform: uppercase;
   font-size: .7em;
 }
+
+/* line 1, ../scss/_home.scss */
+body {
+  background-image: url("images/tempbackground.jpg");
+}
+
+/* line 5, ../scss/_home.scss */
+div.logo {
+  margin-top: 20px;
+  z-index: 9999;
+}
