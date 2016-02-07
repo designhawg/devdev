@@ -9893,6 +9893,20 @@ ul.team li {
 }
 
 /* line 1, ../scss/_home.scss */
+<<<<<<< HEAD
+#logo {
+  margin-top: 20px;
+}
+
+/* line 5, ../scss/_home.scss */
+div.bazinga {
+  margin-right: 20px;
+}
+
+/* line 9, ../scss/_home.scss */
+div.form {
+  margin-top: 20px;
+=======
 body {
   background-image: url("images/tempbackground.jpg");
 }
@@ -9901,4 +9915,5 @@ body {
 div.logo {
   margin-top: 20px;
   z-index: 9999;
+>>>>>>> origin/master
 }
